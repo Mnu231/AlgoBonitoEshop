@@ -4,3 +4,21 @@
 .titulo1{
   padding: 25px;
 }
+.counter-container{
+  
+  padding: 10px;
+  border: 1px;
+  border-style:solid ;
+  border-color:#6610f2 ;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
+  padding: 100x;
+}
+.number-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
