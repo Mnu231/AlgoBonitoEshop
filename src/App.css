@@ -22,3 +22,9 @@
   justify-content: space-around;
   margin-bottom: 25px;
 }
+#productos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
