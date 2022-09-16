@@ -1,6 +1,26 @@
 .imgCart{
   margin-left: 20px;
 }
+#detailTittle{
+  color: #593196;
+}
+.detail{
+  margin: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.imgDetalle{
+  max-width: 35rem;
+  margin-right:3rem;
+}
+.descripcion{
+  max-width: 30rem;
+}
+.btn-outline-primary{
+  margin-left: 0.5rem;
+}
 .titulo1{
   padding: 25px;
 }
@@ -13,8 +33,8 @@
   max-width: 250px;
   display: flex;
   flex-direction: column;
-  margin: 100px;
   padding: 100x;
+  margin: 1rem;
 }
 .number-container{
   display: flex;

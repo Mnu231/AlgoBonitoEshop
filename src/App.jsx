@@ -1,4 +1,4 @@
-
+import ItemDetailContainer from './components/ItemDetailContainer';
 import React from 'react';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
@@ -10,7 +10,7 @@ const App = () => {
     <>
 
     <Navbar />
-    <ItemListContainer greeting="Proximamente..." />
+    <ItemDetailContainer />
     
     </>
   );
