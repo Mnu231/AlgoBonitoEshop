@@ -39,7 +39,7 @@ const ItemDetail = ({ items }) =>{
                 
                 
                 <div className="boton-comprar">
-                    <ItemCount />
+                    <ItemCount stock ={5} initial={1}/>
                 </div>
 
             </div>

@@ -1,9 +1,8 @@
 import Cartwidget from "./Cartwidget";
-
+import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
       <>
-        
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
           <div className="container-fluid">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,24 +11,23 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarColor01">
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
-                  <a className="nav-link active" href="#">Algo Bonito
+                 <Link to="/"> 
+                 <a className="nav-link active" href="#">Algo Bonito
                     <span className="visually-hidden">(current)</span>
                   </a>
+                 </Link> 
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#"></a>
+                 <Link to="/category/1"> <a className="nav-link">Pantalones</a> </Link> 
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Pantalones</a>
+                 <Link to ="/category/2"> <a className="nav-link" >Remeras</a> </Link> 
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Remeras</a>
+                  <Link to ="/category/3"> <a className="nav-link" >Vestidos</a> </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Polleras</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Nosotros</a>
+                  <a className="nav-link" >Nosotros</a>
                 </li>
                
               </ul>
@@ -47,3 +45,4 @@ const Navbar = () => {
   }
 
   export default Navbar;
+  

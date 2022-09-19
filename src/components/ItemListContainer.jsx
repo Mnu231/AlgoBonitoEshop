@@ -1,23 +1,24 @@
-import ItemCount from "./ItemCount";
 import Itemlist from "./ItemList"
 import { useEffect , useState } from "react";
 import customFetch from "../utilities/customFetch";
-
-
 import products from "../utilities/products";
-
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = (props) =>{
-
     const [datos, setdatos] = useState([]);
-
+    const {id} = useParams()
 
       useEffect(() => {
-        customFetch(1000, products)
-            .then(result => setdatos(result))
-            .catch(err => console.log(err))
-
-      }, []);
+        if (id) {
+          customFetch(2000, products.filter(item => item.categoryId === parseInt(id)))
+              .then(result => setdatos(result))
+              .catch(err => console.log(err))
+        } else {
+          customFetch(2000, products)
+              .then(result => setdatos(result))
+              .catch(err => console.log(err))
+        }
+      }, [id]);
       console.log(datos)
   
   
@@ -30,7 +31,7 @@ const ItemListContainer = (props) =>{
     <div id="productos">
       <Itemlist items={datos}/>
     </div>  
-      <ItemCount stock = "5" initial = "1"/>
+      
 
     </div>
     );
