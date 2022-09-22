@@ -2,7 +2,7 @@ import  {useState} from "react"
 const ItemCount = ({stock , initial , onAdd}) =>{
     
 
-    const [cantidad, setCantidad] = useState(1);
+    const [cantidad, setCantidad] = useState(initial);
 
     const addInitial = () =>{
         if(cantidad < stock){
@@ -25,7 +25,7 @@ const ItemCount = ({stock , initial , onAdd}) =>{
                 <button onClick={addInitial} type="button" class="btn btn-secondary">+</button>
             </div>
             <div className="send-container">
-                <button className="btn btn-primary">Agregar al carrito</button>
+                <button onClick={onAdd} className="btn btn-primary">Agregar al carrito</button>
             </div>
         </div>
         </>
