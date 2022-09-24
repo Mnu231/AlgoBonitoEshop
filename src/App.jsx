@@ -1,3 +1,4 @@
+import  CartContextProvider  from './components/CartContext';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import React from 'react';
 import Navbar from './components/Navbar';
@@ -11,6 +12,7 @@ const App = () => {
   return (
     <>
 
+    <CartContextProvider>
     <BrowserRouter>
     <Navbar />
     <Routes>
@@ -20,6 +22,7 @@ const App = () => {
       <Route path='/cart' element={<Cart />}></Route>
     </Routes>
     </BrowserRouter>
+    </CartContextProvider>
     
     </>
   );

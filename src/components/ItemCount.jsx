@@ -1,4 +1,6 @@
 import  {useState} from "react"
+
+
 const ItemCount = ({stock , initial , onAdd}) =>{
     
 
@@ -10,11 +12,12 @@ const ItemCount = ({stock , initial , onAdd}) =>{
         }
     }
 
-    const substractInitial = () =>{
+     const substractInitial = () =>{
         if(cantidad > initial){
             setCantidad (cantidad - 1)
         }
     }
+    
 
     
     return(
@@ -25,7 +28,7 @@ const ItemCount = ({stock , initial , onAdd}) =>{
                 <button onClick={addInitial} type="button" class="btn btn-secondary">+</button>
             </div>
             <div className="send-container">
-                <button onClick={onAdd} className="btn btn-primary">Agregar al carrito</button>
+                <button onClick={()=>onAdd(cantidad)} className="btn btn-primary">Agregar al carrito</button>
             </div>
         </div>
         </>

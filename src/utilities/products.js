@@ -7,7 +7,9 @@ const products = [
         price: 2500, 
         pictureUrl: "https://algo-boonito.000webhostapp.com/img/short1.jpg",
         description:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, animi laudantium quia voluptates debitis suscipit rerum iusto iure numquam architecto?",
-        categoryId: 1
+        categoryId: 1,
+        quantity: 0
+        
     },
     {
         id: 2,
@@ -15,7 +17,8 @@ const products = [
         price: 2500,
         pictureUrl: "https://algo-boonito.000webhostapp.com/img/jean6.jfif",
         description:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, animi laudantium quia voluptates debitis suscipit rerum iusto iure numquam architecto?",
-        categoryId: 2
+        categoryId: 2,
+        quantity: 0
         
     },
     {
@@ -24,7 +27,8 @@ const products = [
         price: 4500,
         pictureUrl: "https://algo-boonito.000webhostapp.com/img/buzo1.jfif",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, animi laudantium quia voluptates debitis suscipit rerum iusto iure numquam architecto?",
-        categoryId:  2
+        categoryId:  2,
+        quantity: 0
     },
     {
         id: 4,
@@ -32,7 +36,8 @@ const products = [
         price: 5000,
         pictureUrl: "https://algo-boonito.000webhostapp.com/img/vestido2.jfif",
         description:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, animi laudantium quia voluptates debitis suscipit rerum iusto iure numquam architecto?",
-        categoryId: 3
+        categoryId: 3,
+        quantity: 0
     },
     {
         id: 5,
@@ -40,7 +45,8 @@ const products = [
         price: 4000,
         pictureUrl:"https://algo-boonito.000webhostapp.com/img/vestido1.jfif",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, animi laudantium quia voluptates debitis suscipit rerum iusto iure numquam architecto?",
-        categoryId: 3
+        categoryId: 3,
+        quantity: 0
     },
     {
         id: 6,
@@ -48,7 +54,8 @@ const products = [
         price: 3500,
         pictureUrl: "https://algo-boonito.000webhostapp.com/img/remera2.jfif",
         description: "Blusa manga larga con escote redondo. Canesú en delantero con aplique de voladitos del mismo tejido. Confeccionada por un tejido de Jacquard de encaje de algodón.",
-        categoryId: 2
+        categoryId: 2,
+        quantity: 0
     }
 ]
 
