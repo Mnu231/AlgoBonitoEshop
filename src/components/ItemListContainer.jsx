@@ -10,17 +10,16 @@ const ItemListContainer = (props) =>{
 
       useEffect(() => {
         if (id) {
-          customFetch(2000, products.filter(item => item.categoryId === parseInt(id)))
+          customFetch(0, products.filter(item => item.categoryId === parseInt(id)))
               .then(result => setdatos(result))
               .catch(err => console.log(err))
         } else {
-          customFetch(2000, products)
+          customFetch(0, products)
               .then(result => setdatos(result))
               .catch(err => console.log(err))
         }
       }, [id]);
-      console.log(datos)
-  
+     
   
     
     return(

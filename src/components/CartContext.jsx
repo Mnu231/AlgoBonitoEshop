@@ -4,14 +4,27 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({children}) =>{
     const [cartList, setCartList] = useState ([])
+
     const addItem = (product ,cantidad) =>{
-        product.quantity = cantidad
-        setCartList([
+        const isIncart = cartList.find((cartList => cartList.id === product.id))
+        
+        if (isIncart == undefined) {
+            product.quantity = cantidad
+            setCartList([
             ...cartList,
             product, 
-            
-            
-        ])
+            ])
+        }else{
+            product.quantity += cantidad
+        }
+        
+               
+    }
+    const removeItemId = (id)=>{
+       setCartList([
+        ...cartList.filter((product) => product.id !==id )
+    ])
+       
         
     }
     const clear = () =>{
@@ -19,7 +32,7 @@ const CartContextProvider = ({children}) =>{
     }
     return(
         <>
-        <CartContext.Provider value={{cartList, addItem , clear}}>
+        <CartContext.Provider value={{cartList, addItem , clear, removeItemId}}>
         {children}
         </CartContext.Provider>
         </>
