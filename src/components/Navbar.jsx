@@ -1,4 +1,4 @@
-import Cartwidget from "./Cartwidget";
+import CartWidget from "./CartWidget";
 import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
@@ -35,7 +35,7 @@ const Navbar = () => {
                 <input className="form-control me-sm-2" type="text" placeholder="Buscar" />
                 <button className="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
               </form>
-              <Link  to = "/cart"><Cartwidget /></Link>
+              <Link  to = "/cart"><CartWidget /></Link>
             </div>
           </div>
         </nav>
