@@ -3,13 +3,12 @@ import ItemDetail from "./ItemDetail"
 import { useEffect , useState } from "react";
 import customFetch from "../utilities/customFetch";
 import { useParams } from "react-router-dom";
-
+import { doc, getDoc } from "firebase/firestore";
 import products from "../utilities/products";
 
-
 const ItemDetailContainer = () =>{
-  const {id} = useParams()
-    const [datos, setdatos] = useState([]);
+  const [datos, setdatos] = useState([]);
+    const {id} = useParams()
 
 
       useEffect(() => {
@@ -18,7 +17,7 @@ const ItemDetailContainer = () =>{
             .catch(err => console.log(err))
 
       }, []);
-
+ 
     return(
     
     <div>
@@ -26,5 +25,6 @@ const ItemDetailContainer = () =>{
     </div>
     );
 }
+
 
 export default ItemDetailContainer;
