@@ -19,6 +19,7 @@ const ItemListContainer = (props) =>{
             }   
             
             const querySnapshot = await getDocs(q);
+            console.log(querySnapshot)
             const dataFromFirestore =  querySnapshot.docs.map(document => ({
                 id: document.id,
                 ...document.data()

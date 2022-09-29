@@ -8,10 +8,12 @@ const ItemDetail = ({ items }) =>{
     const onAdd = ( cantidad ) =>{
         addItem(items , cantidad)
         setItemCount(cantidad)
-        
+        console.log(items.id)   
     }
+    
     return(
         <>
+        
         {
 
             items.pictureUrl
