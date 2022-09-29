@@ -1,7 +1,6 @@
 import Itemlist from "./ItemList"
 import { useEffect , useState } from "react";
-import customFetch from "../utilities/customFetch";
-import products from "../utilities/products";
+
 import { collection, getDocs, query, where } from "firebase/firestore";
 import {db} from "../utilities/fireBaseConfig"
 import { useParams } from "react-router-dom";
@@ -14,9 +13,9 @@ const ItemListContainer = (props) =>{
         const firestoreFetch = async ()=>{
           let q
           if(id){
-             q = query(collection(db, "products"), where('categoryId', '==', parseInt(id) ))
+             q = query(collection(db, "productos"), where('categoryId', '==', parseInt(id) ))
           } else{
-             q = query(collection(db, "products"))
+             q = query(collection(db, "productos"))
             }   
             
             const querySnapshot = await getDocs(q);

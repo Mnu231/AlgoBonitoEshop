@@ -4,7 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/public/json
+/src/utilities/bdd.js
 # testing
 /coverage
 

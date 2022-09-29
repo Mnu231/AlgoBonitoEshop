@@ -4,26 +4,27 @@ import { useEffect , useState } from "react";
 import customFetch from "../utilities/customFetch";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
-import products from "../utilities/products";
+
 
 const ItemDetailContainer = () =>{
-  const [datos, setdatos] = useState([]);
+   const [datos, setdatos] = useState([]);
     const {id} = useParams()
 
 
       useEffect(() => {
-        customFetch(1000, products.find(item => item.id === parseInt(id)))
+        
+      /*   customFetch(1000, products.find(item => item.id === parseInt(id)))
             .then(result => setdatos(result))
-            .catch(err => console.log(err))
+            .catch(err => console.log(err)) */
 
       }, []);
  
-    return(
+    return( 
     
     <div>
         <ItemDetail items={datos}/>
     </div>
-    );
+    ); 
 }
 
 
