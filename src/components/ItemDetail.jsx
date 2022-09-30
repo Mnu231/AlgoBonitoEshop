@@ -8,7 +8,6 @@ const ItemDetail = ({ items }) =>{
     const onAdd = ( cantidad ) =>{
         addItem(items , cantidad)
         setItemCount(cantidad)
-        console.log(items.id)   
     }
     
     return(
@@ -26,7 +25,7 @@ const ItemDetail = ({ items }) =>{
                     
                     <div className="precioNombre">
                         <h2 id="detailTittle"> {items.tittle} </h2>
-    
+                        <h6>Stock Disponible: {items.stock}</h6>
                         <h4>$ {items.price}</h4>
                     </div>
                     
@@ -56,7 +55,7 @@ const ItemDetail = ({ items }) =>{
                         {
                         
                             itemCount === 0 
-                            ? <ItemCount stock = {5} initial={itemCount} onAdd = {onAdd}/>
+                            ? <ItemCount stock = {items.stock} initial={itemCount} onAdd = {onAdd}/>
                             : <Link to = "/cart" ><button type="button" class="btn btn-primary">Carrito</button></Link> 
                             
                         }

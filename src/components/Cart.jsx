@@ -2,10 +2,40 @@ import { Link } from 'react-router-dom';
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import CartItem from "./CartItem";
+import { serverTimestamp, doc, collection, setDoc, updateDoc, increment } from 'firebase/firestore';
+import { db } from '../utilities/fireBaseConfig';
 const Cart = () =>{
     const {cartList , clear , totalProducts, totalPrice} = useContext(CartContext);        
     let total = totalProducts();
     let finalPrice = totalPrice();
+    const createOrder = async () => {
+        console.log("orden Creada")
+        let itemsForDb = cartList.map (item => ({
+            id: item.id,
+            price: item.price,
+            tittle: item.tittle,
+            quantity: item.quantity
+        }))
+        let order = {
+            buyer: {
+                name: "Luis Miguel",
+                mail: "LuisM@gmail.com",
+                phone: "12345678"
+            },
+            date: serverTimestamp(),
+            items: itemsForDb,
+            total: finalPrice,
+        }
+        cartList.forEach (async (item) => {
+           const itemRef = doc(db, "productos", item.id);
+           await updateDoc(itemRef,{
+                stock: increment(-item.quantity)
+           });
+        })
+    const newOrderRef = doc(collection(db, "orders"))
+    await setDoc(newOrderRef, order);
+        clear()
+    }
     return(
        
         <>
@@ -17,7 +47,7 @@ const Cart = () =>{
           <h4 className="card-title">Total de la compra:</h4>
           <p className="card-text">$ {finalPrice}</p>
         </div>
-        <button type="button" class="btn btn-primary">Finalizar Compra</button>
+        <button onClick={createOrder} type="button" class="btn btn-primary">Finalizar Compra</button>
         </div>
         </div>
         {
