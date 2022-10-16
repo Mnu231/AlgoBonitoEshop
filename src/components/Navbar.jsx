@@ -12,22 +12,22 @@ const Navbar = () => {
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
                  <Link to="/"> 
-                 <a className="nav-link active" href="#">Algo Bonito
-                    <span className="visually-hidden">(current)</span>
-                  </a>
+                 <button type="button" class="btn btn-primary">Algo Bonito</button>
                  </Link> 
                 </li>
                 <li className="nav-item">
-                 <Link to="/category/1"> <a className="nav-link">Pantalones</a> </Link> 
+                
+                 <Link to="/category/1"> <button type="button" class="btn btn-primary">Pantalones</button> </Link> 
                 </li>
                 <li className="nav-item">
-                 <Link to ="/category/2"> <a className="nav-link" >Remeras</a> </Link> 
+                
+                 <Link to ="/category/2"> <button type="button" class="btn btn-primary">Remeras</button> </Link> 
                 </li>
                 <li className="nav-item">
-                  <Link to ="/category/3"> <a className="nav-link" >Vestidos</a> </Link>
+                  <Link to ="/category/3"> <button type="button" class="btn btn-primary">Vestidos</button> </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" >Nosotros</a>
+                <button type="button" class="btn btn-primary">Nosotros</button>
                 </li>
                
               </ul>
