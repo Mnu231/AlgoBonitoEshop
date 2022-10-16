@@ -1,7 +1,6 @@
 
 import ItemDetail from "./ItemDetail"
 import { useEffect , useState } from "react";
-import customFetch from "../utilities/customFetch";
 import { useParams } from "react-router-dom";
 import { doc, getDoc, query} from "firebase/firestore";
 import { db } from "../utilities/fireBaseConfig";
@@ -18,20 +17,16 @@ const ItemDetailContainer = () =>{
             const docSnap = await getDoc(docRef);
             
              const docFromfirebase = {
-              id: docSnap.id,
-              ... docSnap.data()
-             }
+              id: docSnap.id, 
+              ...docSnap.data()}
              return(docFromfirebase)
              
         }
-
         docFetch()
         .then(result => setDatos(result))
 
-      }, []);
- 
+      }, [id]);
     return( 
-    
     <div>
         <ItemDetail items={datos}/>
     </div>

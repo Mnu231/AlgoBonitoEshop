@@ -4,6 +4,16 @@
 #detailTittle{
   color: #593196;
 }
+#contenedorCarrito{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.itemContainer{
+  margin-top: 5rem;
+  margin-right: 5rem;
+}
 .detail{
   margin: 5rem;
   display: flex;

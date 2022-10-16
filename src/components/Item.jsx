@@ -6,7 +6,7 @@ const Item = ({id, tittle, price, pictureUrl }) =>{
         <div className="card-body">
           <h5 className="card-title">{tittle}</h5>
           <p className="card-text">$ {price}</p>
-        <Link to={"/item/"+id}> <a href="#" className="btn btn-primary">Detalle</a> </Link>  
+        <Link to={"/item/"+id}> <button className="btn btn-primary">Detalle</button> </Link>  
         </div>
       </div>
     );

@@ -39,6 +39,8 @@ const Cart = () =>{
     return(
        
         <>
+        <div id='contenedorCarrito'>
+
         
         <div>
         <div className="card border-secondary mb-3" style={{maxWidth: '20rem'}}>
@@ -51,13 +53,13 @@ const Cart = () =>{
         </div>
         </div>
         {
-            total == 0 
+            total === 0 
             ?   <div><Link to="/"> <h5>Carrito Vacio </h5> <button type="button" className="btn btn-primary">HOME</button></Link></div>
             : <div></div>
         }
         
 
-        <div>
+        <div className='itemContainer'>
         {cartList.map(cartList => <CartItem key={cartList.id} id={cartList.id} tittle = {cartList.tittle} price = {cartList.price} pictureUrl = {cartList.pictureUrl}  cantidad={cartList.quantity}/>)}
     
         {
@@ -66,6 +68,8 @@ const Cart = () =>{
             : <div></div>
         }
         </div>
+        </div>
+
         </>
     );
 }

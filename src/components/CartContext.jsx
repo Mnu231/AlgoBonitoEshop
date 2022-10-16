@@ -7,7 +7,7 @@ const CartContextProvider = ({children}) =>{
 
     const addItem = (product ,cantidad) =>{
         const isIncart = cartList.find((cartList => cartList.id === product.id))
-        if (isIncart == undefined) {
+        if (isIncart === undefined) {
             product.quantity = cantidad
             setCartList([
             ...cartList,
